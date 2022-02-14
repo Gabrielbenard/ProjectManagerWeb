@@ -1,0 +1,21 @@
+.footer{
+    background-color: black ;
+    color: white;
+    padding: 3em;   
+    text-align:center;
+
+}
+
+.social_list{
+    display: flex; 
+    justify-content: center;
+    list-style-type: none ;
+}
+
+.social_list li{
+    margin: 0 1em;
+}
+
+.social_list li:hover { 
+    color: yellow ;
+}

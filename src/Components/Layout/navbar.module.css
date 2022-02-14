@@ -1,0 +1,30 @@
+.nav{
+    display: flex;  
+    justify-content: space-between;
+    background-color: black;
+    padding: 1em;
+} 
+img{
+    height: 50px;
+
+}  
+
+.list{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+}
+.item{
+    margin-right: 3em ;
+
+}
+
+.item a{
+    color: white;
+    text-decoration: none;
+}
+
+.item a:hover{
+    color: orange;
+}
