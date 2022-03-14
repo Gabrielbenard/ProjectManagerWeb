@@ -13,10 +13,12 @@ function Select({text, name, options,handleOnChange, value}) {
                 
                 {options.map((option)=>(
                     <option value={option.id} key={option.id}>{option.name}</option>
-                ) )}
+                 ))}
             </select>      
         </div>
     );
 } 
 
+//options obtem o categories que obtem o data , ou seja, options.map pegará o json como se fosse o um array 
+// e mostrará option.name de cada categoria 
 export default Select;

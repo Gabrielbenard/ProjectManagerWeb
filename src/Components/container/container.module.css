@@ -6,3 +6,14 @@
     flex-wrap: wrap;
     color: red;
 }
+
+
+.start{
+    justify-content: flex-start;
+}
+
+.column{
+    flex-direction:column;
+    justify-content: flex-start;
+    
+}

@@ -1,21 +1,33 @@
 {
-    "projects": [],
-    "categories":[
-        {
-           "id": 1,
-           "name": "infra" 
-        },
-        {
-           "id": 2,
-           "name": "Development" 
-        },
-        {
-           "id": 3,
-           "name": "design" 
-        },
-        {
-           "id": 4,
-           "name": "infra" 
-        }
-    ]
+  "projects": [
+    {
+      "name": "Projeto 3 ",
+      "budget": "15000",
+      "caterory": {
+        "id": "2",
+        "name": "Development"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 2
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "infra"
+    },
+    {
+      "id": 2,
+      "name": "Development"
+    },
+    {
+      "id": 3,
+      "name": "design"
+    },
+    {
+      "id": 4,
+      "name": "outro"
+    }
+  ]
 }

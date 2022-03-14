@@ -1,26 +1,29 @@
 import ProjectForm from '../project/ProjectForm'
 import styles from './Newproject.module.css'
 import  styles2 from './Pages.css'
-import {useHistory} from 'react-router-dom'
+import { useNavigate } from "react-router-dom"
 
-function newproject(){
+function Newproject(){
 
-    const history = useHistory()
+    const Navigate = useNavigate()
 
     function CreatePost(project){
         project.cost = 0;
         project.services = [];
+
         fetch("http://localhost:5000/projects",{
             method: 'POST',
             headers: {
                 'Content-type': 'application/json',
             },
+            body:JSON.stringify(project),
         })
+        //quando o projeto é adicionado com o post é enviado automaticamente para /projects
         .then((resp)=>resp.json() )
-        .then((data)=> {
+        .then((data) => {
             console.log(data)
             //redirect
-            history.push('/projects', {message:'The Project have been created with sucess'})
+            Navigate('/projects', {state:{message:'The Project have been created with sucess'}})
         })
         .catch((err)=> console.log(err))
 
@@ -32,10 +35,10 @@ function newproject(){
                 <h1>Create your Project</h1>
                 <p> Create Your project then input your services </p> <br/>
                 <p> FORM </p> 
-                <ProjectForm handleSubmit={CreatePost} ProjectData={data} btntext="Create The Project"/>
+                <ProjectForm handleSubmit={CreatePost} btntext="Create The Project"/>
             </div>
         </div>
     )
 }
 
-export default newproject
+export default Newproject

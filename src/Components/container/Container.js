@@ -1,10 +1,10 @@
-import styles from './container.modules.css'
+import styles from './container.module.css'
 
 
-function container(props){
+function container(props,{customClass}){
 
     return(
-        <div className="container"> {props.children} </div>
+        <div className={styles.column}> {props.children} </div>
     )
 }
 

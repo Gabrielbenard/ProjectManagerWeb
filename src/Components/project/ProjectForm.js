@@ -35,12 +35,14 @@ useEffect(()=> {
 }
 ,[])
 
+
 const submit = (e) => {
     e.preventDefault();
     // executo o método que foi passada pela prop e passo project 
     //como parametro da função CreatPost foi passada como props
     handleSubmit(project)
 }
+
 // vai pegar o objeto project e vai alterar sua o valor da propriedade name 
 function handleChange(e){
     SetProjetc({...project, [e.target.name]: e.target.value})
@@ -58,19 +60,36 @@ function handleCategory(e){
 }
 
 
-
-
-
-    
-
     return ( 
         <form onSubmit={submit} className={styles.form}>
-            <Input type='text' text="Name of The Project" name="name" handleOnChange={handleChange} placeholder="put the name of the project" value={project.name ? project.name : ""}/>    
-            <Input type='number' text="Name of The Project" name="name" handleOnChange={handleChange} placeholder="put financial costs" value={project.budget ? project.budget: ""}/>
-            <Select name="category_id" text="select the category" options={categories} handleOnChange={handleCategory} value={project.category ? project.category.id: " "}/>
+            <Input 
+            type="text" 
+            text="Name of The Project" 
+            name="name" 
+            handleOnChange={handleChange} 
+            placeholder="put the name of the project" 
+            value={project.name ? project.name : ""}/>    
+
+            <Input 
+            type="number" 
+            text="Costs of The Project" 
+            name="budget" handleOnChange={handleChange} 
+            placeholder="put financial costs"  />
+
+            <Select name="category_id" 
+            text="select the category"
+             options={categories} 
+             handleOnChange={handleCategory} 
+             value={project.caterory ? project.caterory.id : ''}/>
+
            <SubmitButt text={btntext}/>
-           </form>
+
+        </form>
      );
 }
+//option conterá categories e setcategories obterá o data do fetch get da db.json 
+//{se true ? faça isso  :  senão faça isso  }
+// É IMPORTANTE OBSERVAR O CATERORY ESCRITO ERRONEAMENTE DE PROPÓSITO O MODO
+//COMO ESTÁ ESCRITO NO DB.JSON
 
 export default ProjectForm;

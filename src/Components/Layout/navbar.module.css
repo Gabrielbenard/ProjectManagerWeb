@@ -28,3 +28,10 @@ img{
 .item a:hover{
     color: orange;
 }
+
+.p {
+    color: aqua;
+    margin-right: 500px;
+    justify-content: space-between;
+    align-items: center;
+}
